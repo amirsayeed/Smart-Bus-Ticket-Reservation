@@ -18,18 +18,40 @@ const seats = ['A1', 'A2', 'A3', 'A4',
               'J1', 'J2', 'J3', 'J4'
             ]
 
+const showSeatElement = document.getElementById('selected-seat-no');
+const seatClass = document.getElementById('seat-class');
+const seatFare = document.getElementById('seat-fare');
+const totalPrice = document.getElementById('total-price');
+const grandTotal = document.getElementById('grand-total');
+
 const seatSelection = seats.forEach(seat => {
     const seatNoElement = document.getElementById(seat);
     seatNoElement.addEventListener('click', function(){
     removeBackgroundColorById(seat);
     setBackgroundColorById(seat);
     console.log(seatNoElement.innerText+ ' ' + 'is clicked');
-    const showSeatElement = document.getElementById('selected-seat-no');
+
     showSeatElement.innerText = seatNoElement.innerText;
-    const seatClass = document.getElementById('seat-class');
     seatClass.innerText = 'Economy';
-    const seatFare = document.getElementById('seat-fare');
-    seatFare.innerText = 'BDT 550';
+    seatFare.innerText = 550;
+    totalPrice.innerText = seatFare.innerText;
+    grandTotal.innerText = totalPrice.innerText;
 })
 })
 
+const applyCoupon = () =>{
+    const insertCouponElement = document.getElementById('insert-coupon');
+    const insertCoupon = insertCouponElement.value.toUpperCase();
+    console.log(insertCoupon);
+    if(insertCoupon === 'NEW15'){
+        const discountedTotal = grandTotal.innerText - (grandTotal.innerText*(15/100));
+        console.log(discountedTotal);
+        grandTotal.innerText = Math.floor(discountedTotal);
+    }
+    else if(insertCoupon === 'COUPLE20'){
+        const discountedTotal = grandTotal.innerText - (grandTotal.innerText*(20/100));
+        console.log(discountedTotal);
+        grandTotal.innerText = Math.floor(discountedTotal);
+    }
+    else {return grandTotal.innerText;}
+}

@@ -286,7 +286,7 @@
                 <div class="space-y-2">
                     <h2 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h2>
                     <div class="space-y-8">
-                        <div class="bg-[#F7F8F8] p-3 space-y-4">
+                        <div class="bg-[#F7F8F8] p-4 space-y-4">
                             <div id="selected-seat-info" class="flex gap-10">
                                 <div class="flex flex-col justify-between items-center">
                                     <span class="text-gray-600 font-bold">Seat</span>
@@ -304,18 +304,18 @@
                             <hr>
                             <div class="flex justify-between items-center">
                                 <span class="text-gray-600">Total Price</span>
-                                <span class="font-bold">BDT 1100</span>
+                                <span id="total-price" class="font-bold"></span>
                             </div>
                             <div>
                                 <div
-                                    class="flex bg-[#FFFFFF] items-center justify-between drop-shadow-2xl rounded-xl px-2 py-1 my-2">
-                                    <input id="insert-coupon" class="w-full" type="text" placeholder="Have any coupon?">
-                                    <button
+                                    class="flex bg-[#FFFFFF] items-center justify-between drop-shadow-2xl rounded-xl px-2 py-1 my-3 gap-2">
+                                    <input id="insert-coupon" class="input w-full" type="text" placeholder="Have any coupon?">
+                                    <button onclick="applyCoupon()" 
                                         class="btn bg-[#1DD100] text-[#FFFFFF] font-semibold rounded-lg px-3">Apply</button>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-gray-600">Grand Total</span>
-                                    <span class="font-bold">BDT 1100</span>
+                                    <span id="grand-total" class="font-bold"> BDT</span>
                                 </div>
                             </div>
                         </div>
