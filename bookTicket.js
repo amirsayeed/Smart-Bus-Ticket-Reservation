@@ -17,7 +17,7 @@ const seats = ['A1', 'A2', 'A3', 'A4',
               'I1', 'I2', 'I3', 'I4',
               'J1', 'J2', 'J3', 'J4'
             ]
-
+let selectedSeats = [];
 const showSeatElement = document.getElementById('selected-seat-no');
 const seatClass = document.getElementById('seat-class');
 const seatFare = document.getElementById('seat-fare');
@@ -27,6 +27,8 @@ const grandTotal = document.getElementById('grand-total');
 const seatSelection = seats.forEach(seat => {
     const seatNoElement = document.getElementById(seat);
     seatNoElement.addEventListener('click', function(){
+    selectedSeats.push(seat);
+    console.log(selectedSeats);
     removeBackgroundColorById(seat);
     setBackgroundColorById(seat);
     console.log(seatNoElement.innerText+ ' ' + 'is clicked');
