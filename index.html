@@ -7,7 +7,7 @@
     <title>Bus Ticket Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- DaisyUI for additional UI components -->
+
 
 </head>
 
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex flex-col justify-between p-6 bg-[#F7F8F8] space-y-4 rounded-3xl divide-y divide-dashed pb-2 drop-shadow-lg">
+                            class="flex flex-col justify-between px-6 bg-[#F7F8F8] space-y-4 rounded-3xl divide-y divide-dashed py-3 drop-shadow-lg">
                             <div class="flex justify-between gap-4">
                                 <p>Route:</p>
                                 <p>Dhaka - Sylhet</p>
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div
-                class="container w-1/2 md:w-4/5 mx-auto flex items-center justify-between bg-[#FFFFFF] drop-shadow-xl rounded-xl gap-6 mt-6 p-6">
+                class="container w-1/2 md:w-4/5 mx-auto flex items-start justify-between bg-[#FFFFFF] drop-shadow-xl rounded-xl gap-6 mt-6 px-6 py-10">
                 <!-- Seat Selection Grid -->
                 <div class="flex-1 flex-col gap-3 space-y-2">
                     <div class="flex flex-col space-y-3 divide-y divide-dashed">
@@ -281,14 +281,13 @@
                     </div>
                 </div>
                 <div>
-                    <img src="images/Line 1.jpg" class="w-10/12" alt="">
+                    <img src="images/Line 1.jpg" class="w-9/12" alt="">
                 </div>
                 <!-- Right - Pricing Section -->
                 <div class="space-y-2">
                     <h2 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h2>
-                    <div class="space-y-8">
+                    <div class="space-y-6">
                         <div class="bg-[#F7F8F8] p-4 space-y-4">
-                            <!-- <div id="selected-seat-info" class="flex gap-10"> -->
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center">
                                     <span class="text-gray-600 font-bold">Seat <sup id="seat-quantity"
@@ -298,13 +297,12 @@
                                 </div>
                                 <div id="selected-seat-info" class="flex flex-col"></div>
                             </div>
-                            <!-- </div> -->
                             <hr>
                             <div class="flex justify-between items-center">
                                 <span class="text-gray-600 font-bold">Total Price</span>
                                 <div class="flex font-bold gap-1">
-                                    <span id="total-price"></span>
                                     <span>BDT</span>
+                                    <span id="total-price">0</span>
                                 </div>
                             </div>
                             <div>
@@ -318,8 +316,8 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-gray-600 font-bold">Grand Total</span>
                                     <div class="flex font-bold gap-1">
-                                        <span id="grand-total"> </span>
                                         <span>BDT</span>
+                                        <span id="grand-total">0</span>
                                     </div>
                                 </div>
                             </div>
@@ -329,14 +327,14 @@
                             <label for="passenger-name" class="block text-[#030712] text-sm font-semibold">Passenger
                                 Name*</label>
                             <input id="passenger-name" class="w-full border border-gray-300 rounded p-2 mt-1"
-                                type="text" placeholder="Enter your name">
+                                type="text" placeholder="Enter your name" required>
                         </div>
 
                         <div>
                             <label for="phone-number" class="block text-[#030712] text-sm font-semibold">Phone
                                 Number*</label>
                             <input id="phone-number" class="w-full border border-gray-300 rounded p-2 mt-1" type="text"
-                                placeholder="Enter your phone number">
+                                placeholder="Enter your phone number" required>
                         </div>
 
                         <div>
@@ -345,7 +343,24 @@
                                 placeholder="Enter your email id">
                         </div>
 
-                        <button class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
+                        <button id="confirm-btn" onclick="my_modal_4.showModal()"
+                            class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
+
+                        <dialog id="my_modal_4" class="modal">
+                            <div
+                                class="modal-box flex flex-col items-center justify-center w-11/12 max-w-5xl space-y-4">
+                                <img src="./images/success.png" alt="">
+                                <h2 class="text-2xl font-medium text-[#27AE60]">SUCCESS</h2>
+                                <p class="font-medium text-center">Thank you for Booking Our Bus Seats.<br>
+                                    We are working hard to find the best service and deals for you.</p>
+                                <p>Shortly you will find a confirmation in your email.</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <button class="btn bg-[#27AE60] px-6 rounded-lg text-white">Continue</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
 
                         <div class="flex justify-between text-sm text-gray-600 mt-4">
                             <a href="#" class="underline">Terms and Conditions</a>
