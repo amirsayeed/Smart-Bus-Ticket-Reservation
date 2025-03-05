@@ -1,11 +1,15 @@
 const seats = document.getElementsByClassName("seats-btn");
+const seatQuantityElement = document.getElementById("seat-quantity");
+const seatQuantity = seatQuantityElement.innerText;
+let seatSelected = 0;
 const seatClass = "Economy";
 const seatPrice = 550;
 let total = 0;
 for(const seat of seats){
     seat.addEventListener('click', function(){
         // console.log(seat.innerText);
-        
+        seatSelected+=1;
+        seatQuantityElement.innerText = seatSelected;
         const seatNo = seat.innerText;
         const divP = document.getElementById("selected-seat-info");
         const divC = document.createElement("div");
@@ -40,6 +44,8 @@ for(const seat of seats){
         }
         else {
             document.getElementById("grand-total").innerText = totalPrice;
+            alert("Please enter a valid coupon!");
+            return
         }
         })
     })
