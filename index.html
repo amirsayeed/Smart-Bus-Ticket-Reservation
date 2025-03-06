@@ -284,7 +284,7 @@
                     <img src="images/Line 1.jpg" class="w-9/12" alt="">
                 </div>
                 <!-- Right - Pricing Section -->
-                <div class="space-y-2">
+                <div class="space-y-3">
                     <h2 class="text-[#030712] font-semibold text-2xl">Select Your Seat</h2>
                     <div class="space-y-6">
                         <div class="bg-[#F7F8F8] p-4 space-y-4">
@@ -322,53 +322,31 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <form class="space-y-3">
+                        <label for="passenger-name" class="block text-[#030712] text-sm font-semibold">Passenger
+                            Name*</label>
+                        <input id="passenger-name" class="w-full border border-gray-300 rounded p-2 mt-1" type="text"
+                            placeholder="Enter your name">
 
-                        <div>
-                            <label for="passenger-name" class="block text-[#030712] text-sm font-semibold">Passenger
-                                Name*</label>
-                            <input id="passenger-name" class="w-full border border-gray-300 rounded p-2 mt-1"
-                                type="text" placeholder="Enter your name" required>
-                        </div>
+                        <label for="phone-number" class="block text-[#030712] text-sm font-semibold">Phone
+                            Number*</label>
+                        <input id="phone-number" maxlength="11" class="w-full border border-gray-300 rounded p-2 mt-1"
+                            type="number" placeholder="Enter your phone number">
 
-                        <div>
-                            <label for="phone-number" class="block text-[#030712] text-sm font-semibold">Phone
-                                Number*</label>
-                            <input id="phone-number" class="w-full border border-gray-300 rounded p-2 mt-1" type="text"
-                                placeholder="Enter your phone number" required>
-                        </div>
+                        <label for="email" class="block text-[#030712] text-sm font-semibold">Email ID</label>
+                        <input id="email" class="w-full border border-gray-300 rounded p-2 mt-1" type="email"
+                            placeholder="Enter your email id">
+                    </form>
+                    <button id="confirm-btn" onclick="my_modal_4.showModal()"
+                        class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
 
-                        <div>
-                            <label for="email" class="block text-[#030712] text-sm font-semibold">Email ID</label>
-                            <input id="email" class="w-full border border-gray-300 rounded p-2 mt-1" type="email"
-                                placeholder="Enter your email id">
-                        </div>
 
-                        <button id="confirm-btn" onclick="my_modal_4.showModal()"
-                            class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
-
-                        <dialog id="my_modal_4" class="modal">
-                            <div
-                                class="modal-box flex flex-col items-center justify-center w-11/12 max-w-5xl space-y-4">
-                                <img src="./images/success.png" alt="">
-                                <h2 class="text-2xl font-medium text-[#27AE60]">SUCCESS</h2>
-                                <p class="font-medium text-center">Thank you for Booking Our Bus Seats.<br>
-                                    We are working hard to find the best service and deals for you.</p>
-                                <p>Shortly you will find a confirmation in your email.</p>
-                                <div class="modal-action">
-                                    <form method="dialog">
-                                        <button class="btn bg-[#27AE60] px-6 rounded-lg text-white">Continue</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </dialog>
-
-                        <div class="flex justify-between text-sm text-gray-600 mt-4">
-                            <a href="#" class="underline">Terms and Conditions</a>
-                            <a href="#" class="underline">Cancellation Policy</a>
-                        </div>
+                    <div class="flex justify-between text-sm text-gray-600 mt-4">
+                        <a href="#" class="underline">Terms and Conditions</a>
+                        <a href="#" class="underline">Cancellation Policy</a>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>

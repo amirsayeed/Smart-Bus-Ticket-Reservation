@@ -2,9 +2,9 @@ const seats = document.getElementsByClassName("seats-btn");
 const seatQuantityElement = document.getElementById("seat-quantity");
 const seatQuantity = seatQuantityElement.innerText;
 const seatsInitial = parseInt(document.getElementById("seats-remaining").innerText);
-let seatSelected = 0;
 const seatClass = "Economy";
 const seatPrice = 550;
+let seatSelected = 0;
 let total = 0;
 
 document.getElementById("apply-coupon").addEventListener('click',function(){
@@ -60,5 +60,16 @@ function seatsAvailable(seat){
     setElementTextByIdAndValue("seats-remaining", seatsAvailable)
 }
 
-    
+function formValidate(){
+    const pName = document.getElementById("passenger-name").value;
+    const pNum = document.getElementById("phone-number").value;
+    if(typeof(pName)==='string' && pNum.length===11){
+        alert("Entered successfully");
+        window.location.href ='./booking.html';
+    }else{
+        alert("Please fill all fields");
+        return
+    }
+}
 
+document.getElementById("confirm-btn").addEventListener('click', formValidate);

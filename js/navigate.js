@@ -5,3 +5,7 @@ function buyTickets() {
                 block: 'start'      
             });
         }
+
+document.getElementById("redirect").addEventListener('click',function(){
+    window.location.assign("./index.html")
+})
