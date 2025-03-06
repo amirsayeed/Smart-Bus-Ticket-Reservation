@@ -17,7 +17,7 @@
         <nav class="bg-base-100 p-5 shadow-lg">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <a href="#" class="text-3xl font-bold text-gray-800">P-Ticket</a>
-                <ul class="flex space-x-6 text-gray-700">
+                <ul class="hidden md:flex space-x-6 text-gray-700">
                     <li><a href="#" class="hover:text-gray-900">Home</a></li>
                     <li><a href="#" class="hover:text-gray-900">About</a></li>
                     <li><a href="#" class="hover:text-gray-900">Destination</a></li>
@@ -35,12 +35,12 @@
         <!-- Hero Section -->
         <section class="bg-white py-6">
             <div class="px-10">
-                <div class="hero min-h-screen bg-no-repeat rounded-3xl"
+                <div class="hero md:min-h-screen bg-no-repeat rounded-3xl"
                     style="background-image: url(images/banner.png);">
                     <div class="bg-opacity-40"></div>
                     <div class="hero-content text-neutral-content text-center">
                         <div class="max-w-fit text-[#FFFFFF] space-y-4">
-                            <h1 class="text-6xl font-bold mb-4">End-to-End Travel with <br>
+                            <h1 class="md:text-3xl lg:text-6xl font-bold mb-4">End-to-End Travel with <br>
                                 <span class="text-[#1DD100]">P Paribahan</span>
                             </h1>
                             <p class="mb-6">Yes, you can run unit tests and view the results directly within the app.
@@ -54,23 +54,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="container mx-auto -mt-12 flex justify-center">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="flex gap-2 p-6 border-2 border-b-[#1DD100] rounded-2xl drop-shadow-xl bg-[#FFFFFF]">
+                <div class="container mx-auto relative my-5 md:-mt-14 flex justify-center">
+                    <div class="flex flex-col relative lg:flex-row gap-6">
+                        <div
+                            class="flex gap-2 p-3 md:p-6 border-2 border-b-[#1DD100] rounded-2xl drop-shadow-xl bg-[#FFFFFF]">
                             <img class="w-16" src="images/people.png" alt="">
                             <div class="text-center">
                                 <p class="text-2xl font-bold">500K+</p>
                                 <p class="text-gray-600">Registered users</p>
                             </div>
                         </div>
-                        <div class="flex gap-2 p-6 border-2 border-b-[#1DD100] rounded-2xl drop-shadow-xl bg-[#FFFFFF]">
+                        <div
+                            class="flex gap-2 p-3 md:p-6 border-2 border-b-[#1DD100] rounded-2xl drop-shadow-xl bg-[#FFFFFF]">
                             <img class="w-16" src="images/ticket-cupon.png" alt="">
                             <div class="text-center">
                                 <p class="text-2xl font-bold">1.7 Lacks</p>
                                 <p class="text-gray-600">Tickets sold</p>
                             </div>
                         </div>
-                        <div class="flex gap-2 p-6 border-2 border-b-[#1DD100] rounded-xl drop-shadow-xl bg-[#FFFFFF]">
+                        <div
+                            class="flex gap-2 p-3 md:p-6 border-2 border-b-[#1DD100] rounded-xl drop-shadow-xl bg-[#FFFFFF]">
                             <img class="w-16" src="images/stoppage.png" alt="">
                             <div class="text-center">
                                 <p class="text-2xl font-bold">80K+</p>
@@ -86,11 +89,11 @@
         <section class="py-10">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-8">Best offers for you</h2>
-                <div class="flex items-center justify-center space-x-6 mb-2">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
                     <div
-                        class="flex items-center justify-center bg-[#FFBF0F] p-2 rounded-2xl w-[573px] h-[200px] gap-6">
+                        class="flex items-center justify-center bg-[#FFBF0F] p-2 rounded-2xl max-w-md md:w-[573px] md:h-[200px] gap-6">
                         <div class="flex flex-col items-center gap-2">
-                            <p class="text-5xl font-bold text-[#030712CC]">15% OFF</p>
+                            <p class="text-2xl lg:text-5xl font-bold text-[#030712CC]">15% OFF</p>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
                             <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
                         </div>
@@ -103,10 +106,10 @@
                         </div>
 
                     </div>
-                    <div
-                        class="flex items-center justify-center bg-[#F78C9C] p-2 rounded-2xl w-[573px] h-[200px] gap-6">
+                    <div class="flex items-center justify-center bg-[#F78C9C] p-2 rounded-2xl max-w-md md:w-[573px]
+                        md:h-[200px] gap-6">
                         <div class="flex flex-col items-center gap-2">
-                            <p class="text-5xl font-bold text-[#030712CC]">20% OFF</p>
+                            <p class="text-2xl lg:text-5xl font-bold text-[#030712CC]">20% OFF</p>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
                             <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
                         </div>
@@ -323,7 +326,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="space-y-3">
+                    <form class="space-y-3 py-4">
                         <label for="passenger-name" class="block text-[#030712] text-sm font-semibold">Passenger
                             Name*</label>
                         <input id="passenger-name" class="w-full border border-gray-300 rounded p-2 mt-1" type="text"
@@ -338,8 +341,7 @@
                         <input id="email" class="w-full border border-gray-300 rounded p-2 mt-1" type="email"
                             placeholder="Enter your email id">
                     </form>
-                    <button id="confirm-btn" onclick="my_modal_4.showModal()"
-                        class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
+                    <button id="confirm-btn" class="w-full bg-[#1DD100] text-white py-2 rounded-lg mt-4">Next</button>
 
 
                     <div class="flex justify-between text-sm text-gray-600 mt-4">

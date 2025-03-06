@@ -50,7 +50,8 @@ for(const seat of seats){
         
         document.getElementById("total-price").innerText = total;
         document.getElementById("grand-total").innerText = total;
-       
+
+        document.getElementById("confirm-btn").addEventListener('click',formValidate);
     })
 
 }
@@ -72,4 +73,3 @@ function formValidate(){
     }
 }
 
-document.getElementById("confirm-btn").addEventListener('click', formValidate);
